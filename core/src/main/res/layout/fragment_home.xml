@@ -64,8 +64,6 @@
         android:textSize="20sp"/>
 
     <com.google.android.flexbox.FlexboxLayout
-        xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         app:layout_constraintTop_toBottomOf="@id/tvSkillsLabel"
@@ -77,68 +75,50 @@
         app:alignItems="stretch"
         app:justifyContent="space_around"
         app:alignContent="space_between"
-        >
+        android:paddingBottom="@dimen/general_margin"
+        android:clipToPadding="false">
 
-        <androidx.cardview.widget.CardView
+        <com.adamstyrc.portfolioapp.ui.view.MaterialLabelView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="@dimen/small_margin"
-            android:elevation="8dp">
+            app:text="Android SDK"
+            />
 
-            <TextView
-                android:id="@+id/tvContent"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:paddingLeft="@dimen/general_margin"
-                android:paddingRight="@dimen/general_margin"
-                android:paddingTop="@dimen/tiny_margin"
-                android:paddingBottom="@dimen/tiny_margin"
-                android:layout_gravity="center"
-                android:textSize="20dp"
-                android:text="Android SDK"
-                />
-
-        </androidx.cardview.widget.CardView>
-
-        <androidx.cardview.widget.CardView
+        <com.adamstyrc.portfolioapp.ui.view.MaterialLabelView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="@dimen/small_margin"
-            android:elevation="8dp">
+            app:text="Android"
+            />
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:paddingLeft="@dimen/general_margin"
-                android:paddingRight="@dimen/general_margin"
-                android:paddingTop="@dimen/tiny_margin"
-                android:paddingBottom="@dimen/tiny_margin"
-                android:layout_gravity="center"
-                android:textSize="20dp"
-                android:text="Aa aa a"
-                />
-
-        </androidx.cardview.widget.CardView>
-
-        <androidx.cardview.widget.CardView
+        <com.adamstyrc.portfolioapp.ui.view.MaterialLabelView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="@dimen/small_margin"
-            android:elevation="8dp">
+            app:text="Kotlin"
+            />
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:paddingLeft="@dimen/general_margin"
-                android:paddingRight="@dimen/general_margin"
-                android:paddingTop="@dimen/tiny_margin"
-                android:paddingBottom="@dimen/tiny_margin"
-                android:layout_gravity="center"
-                android:textSize="20dp"
-                android:text="Aa aa a"
-                />
+        <com.adamstyrc.portfolioapp.ui.view.MaterialLabelView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/small_margin"
+            app:text="Dagger"
+            />
 
-        </androidx.cardview.widget.CardView>
+        <com.adamstyrc.portfolioapp.ui.view.MaterialLabelView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/small_margin"
+            app:text="Retrofit"
+            />
+
+        <com.adamstyrc.portfolioapp.ui.view.MaterialLabelView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/small_margin"
+            app:text="Android Testing"
+            />
     </com.google.android.flexbox.FlexboxLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

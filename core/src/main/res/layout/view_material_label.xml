@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:parentTag="androidx.cardview.widget.CardView">
+
+    <TextView
+        android:id="@+id/tvContent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingLeft="@dimen/general_margin"
+        android:paddingRight="@dimen/general_margin"
+        android:paddingTop="@dimen/tiny_margin"
+        android:paddingBottom="@dimen/tiny_margin"
+        android:layout_gravity="center"
+        android:textSize="20dp"
+        tools:text="Android SDK"
+        />
+
+</merge>

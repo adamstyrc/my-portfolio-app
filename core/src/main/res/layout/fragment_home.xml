@@ -1,124 +1,151 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
+
+<androidx.core.widget.NestedScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#eeeeee">
+    android:fillViewport="true">
 
-    <TextView
-        android:id="@+id/tvGeneralTitle"
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:textAlignment="center"
-        android:textSize="24sp"
-        android:text="Adam Styrc"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_height="700dp"
+        android:background="#eeeeee">
 
-    <ImageView
-        android:id="@+id/ivAvatar"
-        android:layout_width="match_parent"
-        android:layout_height="120dp"
-        android:layout_marginTop="@dimen/general_margin"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tvGeneralTitle"
-        android:src="@mipmap/ic_launcher"
-        />
+        <TextView
+            android:id="@+id/tvGeneralTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:text="Adam Styrc"
+            android:textAlignment="center"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/tvRole"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/ivAvatar"
-        android:layout_marginTop="@dimen/general_margin"
-        android:text="Android Developer"
-        android:textSize="16sp"/>
+        <ImageView
+            android:id="@+id/ivAvatar"
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:layout_marginTop="@dimen/general_margin"
+            android:src="@mipmap/ic_launcher"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvGeneralTitle" />
 
-    <TextView
-        android:id="@+id/tvSubRole"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tvRole"
-        android:text="since 2012"
-        android:textSize="14sp"/>
-
-    <TextView
-        android:id="@+id/tvSkillsLabel"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tvSubRole"
-        android:layout_marginTop="@dimen/general_margin"
-        android:text="Skills"
-        android:textSize="20sp"/>
-
-    <com.google.android.flexbox.FlexboxLayout
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@id/tvSkillsLabel"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginStart="@dimen/general_margin"
-        android:layout_marginEnd="@dimen/general_margin"
-        app:flexWrap="wrap"
-        app:alignItems="stretch"
-        app:justifyContent="space_around"
-        app:alignContent="space_between"
-        android:paddingBottom="@dimen/general_margin"
-        android:clipToPadding="false">
-
-        <com.adamstyrc.portfolioapp.ui.view.MaterialLabelView
+        <TextView
+            android:id="@+id/tvRole"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_margin="@dimen/small_margin"
-            app:text="Android SDK"
-            />
+            android:layout_marginTop="@dimen/general_margin"
+            android:text="Android Developer"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/ivAvatar" />
 
-        <com.adamstyrc.portfolioapp.ui.view.MaterialLabelView
+        <TextView
+            android:id="@+id/tvSubRole"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_margin="@dimen/small_margin"
-            app:text="Android"
-            />
+            android:text="since 2012"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvRole" />
 
-        <com.adamstyrc.portfolioapp.ui.view.MaterialLabelView
+        <TextView
+            android:id="@+id/tvSkillsLabel"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_margin="@dimen/small_margin"
-            app:text="Kotlin"
-            />
+            android:layout_marginTop="@dimen/general_margin"
+            android:text="Skills"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvSubRole" />
 
-        <com.adamstyrc.portfolioapp.ui.view.MaterialLabelView
+        <com.google.android.flexbox.FlexboxLayout
+            android:id="@+id/layoutSkillsBox"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/general_margin"
+            android:layout_marginEnd="@dimen/general_margin"
+            android:clipToPadding="false"
+            android:paddingBottom="@dimen/general_margin"
+            app:alignContent="space_between"
+            app:alignItems="stretch"
+            app:flexWrap="wrap"
+            app:justifyContent="space_around"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvSkillsLabel">
+
+            <com.adamstyrc.portfolioapp.ui.view.MaterialLabelView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/small_margin"
+                app:text="Android SDK" />
+
+            <com.adamstyrc.portfolioapp.ui.view.MaterialLabelView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/small_margin"
+                app:text="Android" />
+
+            <com.adamstyrc.portfolioapp.ui.view.MaterialLabelView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/small_margin"
+                app:text="Kotlin" />
+
+            <com.adamstyrc.portfolioapp.ui.view.MaterialLabelView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/small_margin"
+                app:text="Dagger" />
+
+            <com.adamstyrc.portfolioapp.ui.view.MaterialLabelView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/small_margin"
+                app:text="Retrofit" />
+
+            <com.adamstyrc.portfolioapp.ui.view.MaterialLabelView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/small_margin"
+                app:text="Android Testing" />
+        </com.google.android.flexbox.FlexboxLayout>
+
+        <TextView
+            android:id="@+id/tvDescriptionLabel"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_margin="@dimen/small_margin"
-            app:text="Dagger"
-            />
+            android:layout_marginTop="@dimen/general_margin"
+            android:text="Description"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/layoutSkillsBox" />
 
-        <com.adamstyrc.portfolioapp.ui.view.MaterialLabelView
-            android:layout_width="wrap_content"
+        <TextView
+            android:id="@+id/tvDescription"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="@dimen/small_margin"
-            app:text="Retrofit"
-            />
+            android:layout_marginStart="@dimen/general_margin"
+            android:layout_marginTop="@dimen/small_margin"
+            android:layout_marginEnd="@dimen/general_margin"
+            android:text="@string/description"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvDescriptionLabel" />
 
-        <com.adamstyrc.portfolioapp.ui.view.MaterialLabelView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="@dimen/small_margin"
-            app:text="Android Testing"
-            />
-    </com.google.android.flexbox.FlexboxLayout>
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>

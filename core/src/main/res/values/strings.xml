@@ -3,4 +3,5 @@
     <string name="title_home">Home</string>
     <string name="title_dashboard">Dashboard</string>
     <string name="title_notifications">Notifications</string>
+    <string name="description">I\'ve started my journey with Android in 2012 as an internship and I love it to this day! My experience varies from small startup apps to huge enterprise products, from libraries projects to Google Play blockbusters. Sometimes I spend time writing backend when needed in technologies like Node.js or Java Spring... But Android stays as my main interest still :) I try to never get old with obsolete toolset so I keep learning all the time via reading blogs, attending both local meetups and big conferences like DroidCon or AndroidMakers. Recently I\'ve started to deepen Flutter for fast cross-platform development. Also with a group of friends we started to fire some blog posts on: https://engineerable.dev My github: https://github.com/adamstyrc</string>
 </resources>

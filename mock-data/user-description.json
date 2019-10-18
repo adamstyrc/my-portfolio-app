@@ -1,3 +1,13 @@
 {
-  "name": "Adam Styrc"
+  "name": "Adam Styrc",
+  "skills": [
+    "Android SDK",
+    "Android",
+    "Kotlin",
+    "Dagger2",
+    "Retrofit",
+    "Android Testing",
+    "RxJava"
+  ],
+  "description": "This is my clean and shiny description!"
 }

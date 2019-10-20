@@ -19,6 +19,7 @@ package com.adamstyrc.portfolioapp.dagger
 import android.app.Application
 import com.adamstyrc.portfolioapp.BuildConfig
 import com.adamstyrc.portfolioapp.database.AppDatabase
+import com.readystatesoftware.chuck.ChuckInterceptor
 import dagger.Module
 import dagger.Provides
 import dagger.Reusable
@@ -43,8 +44,19 @@ class CoreDataModule {
         }
 
     @Provides
-    fun provideOkHttpClient(interceptor: HttpLoggingInterceptor): OkHttpClient =
-        OkHttpClient.Builder().addInterceptor(interceptor).build()
+    fun provideOkHttpClient(
+        application: Application,
+        interceptor: HttpLoggingInterceptor
+    ): OkHttpClient {
+        val okHttpBuilder = OkHttpClient.Builder()
+        okHttpBuilder.addInterceptor(interceptor).build()
+
+        if (BuildConfig.BUILD_TYPE != "release") {
+            okHttpBuilder.addInterceptor(ChuckInterceptor(application))
+        }
+
+        return okHttpBuilder.build()
+    }
 
     @Provides
     @Singleton

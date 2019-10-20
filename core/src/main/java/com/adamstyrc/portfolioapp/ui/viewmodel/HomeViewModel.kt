@@ -22,6 +22,10 @@ class HomeViewModel @Inject constructor(
     private val loading = MutableLiveData<Boolean>()
     private val snackbar = MutableLiveData<String>()
 
+    init {
+        updateProfile()
+    }
+
     fun isLoading(): LiveData<Boolean> = loading
 
     fun updateProfile() {

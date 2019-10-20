@@ -9,7 +9,7 @@ import java.util.*
 
 class SkillsConverter {
 
-    var gson = Gson()
+    private var gson = Gson()
 
     @TypeConverter
     fun toSkills(string: String?): User.Skills {
@@ -18,11 +18,11 @@ class SkillsConverter {
         }
 
         val listType = object : TypeToken<List<String>>() {}.type
-        return gson.fromJson(string, listType)
+        return User.Skills(gson.fromJson(string, listType))
     }
 
     @TypeConverter
     fun fromSkills(skills: User.Skills): String {
-        return gson.toJson(skills)
+        return gson.toJson(skills.skills)
     }
 }

@@ -26,4 +26,8 @@ class MaterialLabelView : CardView {
 
         elevation = context.resources.getDimension(R.dimen.small_margin)
     }
+
+    fun setLabel(skill: String) {
+        tvContent.text = skill
+    }
 }

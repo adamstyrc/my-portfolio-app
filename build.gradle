@@ -20,8 +20,8 @@ buildscript {
             retrofit                        : "com.squareup.retrofit2:retrofit:2.6.2",
             retrofit_converter              : "com.squareup.retrofit2:converter-gson:2.6.2",
 //            retrofit_adapter_rxjava         : "com.squareup.retrofit2:adapter-rxjava2:2.6.2",
-            okhttp3                         : "com.squareup.okhttp3:logging-interceptor:3.14.4",
-            okhttp3_logging_interceptor     : "com.squareup.okhttp3:logging-interceptor:3.14.4",
+            okhttp3                         : "com.squareup.okhttp3:okhttp:3.10.0",
+            okhttp3_logging_interceptor     : "com.squareup.okhttp3:logging-interceptor:3.10.0",
             chuck                           : "com.readystatesoftware.chuck:library:1.1.0",
             gson                            : "com.google.code.gson:gson:2.8.5",
 

@@ -14,10 +14,9 @@ class NetworkModule {
 
     @Provides
     @Reusable
-    fun provideGithubApi(okHttpClient: OkHttpClient ): GithubApi {
+    fun provideGithubApi(okHttpClient: OkHttpClient): GithubApi {
         return Retrofit.Builder()
             .baseUrl(GithubApi.HOST_ADDRESS)
-//            .callFactory { OkHttpClient.Builder().build().newCall(it) }
             .callFactory { okHttpClient.newCall(it) }
             .addConverterFactory(GsonConverterFactory.create(Gson()))
             .build()

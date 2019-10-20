@@ -2,7 +2,7 @@
     package="com.adamstyrc.app">
 
     <application>
-        <activity android:name="com.adamstyrc.portfolioapp.MainActivity">
+        <activity android:name="com.adamstyrc.portfolioapp.ui.activity.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />

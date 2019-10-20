@@ -26,7 +26,9 @@ class HomeViewModel @Inject constructor(
         updateProfile()
     }
 
-    fun isLoading(): LiveData<Boolean> = loading
+    fun loading(): LiveData<Boolean> = loading
+
+    fun snackbar(): LiveData<String> = snackbar
 
     fun updateProfile() {
         launchDataLoad {
@@ -49,5 +51,9 @@ class HomeViewModel @Inject constructor(
 
     private fun displayErrorMessage() {
         snackbar.value = "Could not load user data."
+    }
+
+    fun onSnackbarShown() {
+        snackbar.value = null
     }
 }

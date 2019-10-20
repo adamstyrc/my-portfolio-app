@@ -14,6 +14,7 @@ import com.adamstyrc.portfolioapp.dagger.utils.CircleTransform
 import com.adamstyrc.portfolioapp.ui.view.MaterialLabelView
 import com.adamstyrc.portfolioapp.ui.viewmodel.HomeViewModel
 import com.google.android.flexbox.FlexboxLayout
+import com.google.android.material.snackbar.Snackbar
 import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.fragment_home.*
 
@@ -75,6 +76,13 @@ class HomeFragment : Fragment() {
                 user.description?.let {
                     tvDescription.text = it
                 }
+            }
+        })
+
+        viewModel.snackbar().observe(this, Observer { text ->
+            text?.let {
+                Snackbar.make(layoutRoot, text, Snackbar.LENGTH_SHORT).show()
+                viewModel.onSnackbarShown()
             }
         })
     }

@@ -7,10 +7,11 @@
     android:layout_height="match_parent"
     android:fillViewport="true">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="700dp"
-        android:background="#eeeeee">
+        android:layout_height="wrap_content"
+        android:background="#eeeeee"
+        android:orientation="vertical">
 
         <TextView
             android:id="@+id/tvGeneralTitle"
@@ -22,69 +23,56 @@
             android:text="Adam Styrc"
             android:textAlignment="center"
             android:textSize="28sp"
-            android:textStyle="bold"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            android:textStyle="bold" />
 
         <ImageView
             android:id="@+id/ivAvatar"
             android:layout_width="match_parent"
             android:layout_height="120dp"
             android:layout_marginTop="@dimen/general_margin"
-            android:src="@mipmap/ic_launcher"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/tvGeneralTitle" />
+            android:src="@mipmap/ic_launcher" />
 
         <TextView
             android:id="@+id/tvRole"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
             android:layout_marginTop="@dimen/general_margin"
-            android:text="Android Developer"
+            android:text="@string/android_developer"
             android:textSize="16sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/ivAvatar" />
+            />
 
         <TextView
             android:id="@+id/tvSubRole"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
             android:text="since 2012"
-            android:textSize="14sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/tvRole" />
+            android:textSize="14sp" />
 
         <TextView
             android:id="@+id/tvSkillsLabel"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/general_margin"
-            android:text="Skills"
+            android:layout_gravity="center_horizontal"
+            android:text="@string/skills"
             android:textSize="20sp"
-            android:textStyle="bold"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/tvSubRole" />
+            android:textStyle="bold" />
 
         <com.google.android.flexbox.FlexboxLayout
             android:id="@+id/layoutSkillsBox"
-            android:layout_width="0dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/general_margin"
             android:layout_marginEnd="@dimen/general_margin"
+            android:layout_gravity="center_horizontal"
             android:clipToPadding="false"
             android:paddingBottom="@dimen/general_margin"
             app:alignContent="space_between"
             app:alignItems="stretch"
             app:flexWrap="wrap"
-            app:justifyContent="space_around"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/tvSkillsLabel">
+            app:justifyContent="space_around">
 
             <com.adamstyrc.portfolioapp.ui.view.MaterialLabelView
                 android:layout_width="wrap_content"
@@ -128,24 +116,20 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/general_margin"
-            android:text="Description"
+            android:layout_gravity="center_horizontal"
+            android:text="@string/description"
             android:textSize="20sp"
-            android:textStyle="bold"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/layoutSkillsBox" />
+            android:textStyle="bold" />
 
         <TextView
             android:id="@+id/tvDescription"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
             android:layout_marginStart="@dimen/general_margin"
             android:layout_marginTop="@dimen/small_margin"
             android:layout_marginEnd="@dimen/general_margin"
-            android:text="@string/description"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/tvDescriptionLabel" />
+            android:text="@string/description_sample" />
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+    </LinearLayout>
 </androidx.core.widget.NestedScrollView>

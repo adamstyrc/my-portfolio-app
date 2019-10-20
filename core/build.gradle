@@ -5,11 +5,12 @@ apply plugin: 'kotlin-kapt'
 
 
 android {
-    compileSdkVersion 29
-    buildToolsVersion "29.0.2"
+    compileSdkVersion versions.compile_sdk
+    buildToolsVersion versions.build_tools
+
     defaultConfig {
-        minSdkVersion 21
-        targetSdkVersion 29
+        minSdkVersion versions.min_sdk
+        targetSdkVersion versions.target_sdk
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
@@ -30,7 +31,7 @@ android {
 dependencies {
     implementation project(":network")
 
-    implementation"org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    implementation deps.kotlin_std_lib
     implementation 'androidx.appcompat:appcompat:1.1.0'
     implementation 'androidx.core:core-ktx:1.1.0'
     implementation 'com.google.android.material:material:1.0.0'
@@ -51,6 +52,8 @@ dependencies {
 
     implementation "androidx.room:room-runtime:2.2.0"
     kapt "androidx.room:room-compiler:2.2.0"
+
+    implementation 'com.squareup.picasso:picasso:2.71828'
 
     implementation deps.okhttp3
     implementation deps.okhttp3_logging_interceptor

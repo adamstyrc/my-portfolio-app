@@ -12,7 +12,7 @@ import com.adamstyrc.portfolioapp.database.entity.User
 
 @Database(
     entities = [User::class],
-    version = 1,
+    version = 2,
     exportSchema = false
 )
 @TypeConverters(SkillsConverter::class)

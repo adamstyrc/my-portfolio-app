@@ -10,9 +10,11 @@ import androidx.lifecycle.ViewModelProviders
 import com.adamstyrc.portfolioapp.PortfolioApplication
 import com.adamstyrc.portfolioapp.R
 import com.adamstyrc.portfolioapp.coreComponent
+import com.adamstyrc.portfolioapp.dagger.utils.CircleTransform
 import com.adamstyrc.portfolioapp.ui.view.MaterialLabelView
 import com.adamstyrc.portfolioapp.ui.viewmodel.HomeViewModel
 import com.google.android.flexbox.FlexboxLayout
+import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.fragment_home.*
 
 class HomeFragment : Fragment() {
@@ -51,6 +53,16 @@ class HomeFragment : Fragment() {
             if (user != null) {
                 user.name?.let {
                     tvGeneralTitle.text = it
+                }
+
+                if (user.avatar != null) {
+                    Picasso.get()
+                        .load(user.avatar)
+                        .placeholder(R.mipmap.ic_launcher)
+                        .transform(CircleTransform())
+                        .resize(200, 200)
+                        .centerCrop()
+                        .into(ivAvatar)
                 }
 
                 layoutSkillsBox.removeAllViews()

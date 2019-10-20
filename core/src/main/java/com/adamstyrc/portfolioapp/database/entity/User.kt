@@ -9,6 +9,7 @@ import com.adamstyrc.portfolioapp.database.converter.SkillsConverter
 @Entity
 data class User(
     val name: String?,
+    val avatar: String?,
     val skills: Skills?,
     val description: String?,
     @PrimaryKey val id: Int = 0
@@ -18,6 +19,7 @@ data class User(
         fun fromUserDescription(userDescription: UserDescription) =
             User(
                 userDescription.name,
+                userDescription.avatar,
                 Skills(userDescription.skills ?: ArrayList()),
                 userDescription.description
             )

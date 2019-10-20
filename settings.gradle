@@ -1,2 +1,2 @@
-include ':core', ':app'
+include ':core', ':app', ':network'
 rootProject.name='PortfolioApp'

@@ -1,0 +1,20 @@
+apply plugin: 'java-library'
+apply plugin: 'kotlin'
+apply plugin: 'kotlin-kapt'
+
+dependencies {
+    implementation deps.kotlin_std_lib
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.3.0'
+
+    api deps.dagger
+    kapt deps.dagger_compiler
+
+    implementation deps.gson
+    implementation deps.retrofit
+    implementation deps.retrofit_converter
+    implementation deps.okhttp3_logging_interceptor
+
+    testImplementation deps.junit
+    testImplementation deps.mockito
+    testImplementation deps.google_truth
+}
